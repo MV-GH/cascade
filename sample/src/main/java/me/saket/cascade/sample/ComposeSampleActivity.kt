@@ -18,9 +18,9 @@ import androidx.compose.material.icons.twotone.ContentCopy
 import androidx.compose.material.icons.twotone.Delete
 import androidx.compose.material.icons.twotone.Language
 import androidx.compose.material.icons.twotone.Share
-import androidx.compose.material3.Divider
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -70,7 +70,7 @@ class ComposeSampleActivity : AppCompatActivity() {
           ) {
             TopAppBar(
               title = { Text(stringResource(R.string.app_name)) },
-              colors = TopAppBarDefaults.smallTopAppBarColors(
+              colors = TopAppBarDefaults.topAppBarColors(
                 containerColor = Color.Transparent
               ),
               actions = {
@@ -222,7 +222,7 @@ class ComposeSampleActivity : AppCompatActivity() {
       text = { Text("Plain text") },
       onClick = {}
     )
-    Divider(
+    HorizontalDivider(
       color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)
     )
     DropdownMenuItem(

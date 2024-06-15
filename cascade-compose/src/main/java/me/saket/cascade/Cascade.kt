@@ -332,13 +332,21 @@ interface CascadeColumnScope : ColumnScope {
   fun DropdownMenuItem(
     text: @Composable () -> Unit,
     children: @Composable CascadeColumnScope.() -> Unit,
+    @Suppress("ABSTRACT_COMPOSABLE_DEFAULT_PARAMETER_VALUE")
     modifier: Modifier = Modifier,
+    @Suppress("ABSTRACT_COMPOSABLE_DEFAULT_PARAMETER_VALUE")
     childrenHeader: @Composable CascadeColumnScope.() -> Unit = { DropdownMenuHeader(text = text) },
+    @Suppress("ABSTRACT_COMPOSABLE_DEFAULT_PARAMETER_VALUE")
     leadingIcon: @Composable (() -> Unit)? = null,
+    @Suppress("ABSTRACT_COMPOSABLE_DEFAULT_PARAMETER_VALUE")
     trailingIcon: @Composable (() -> Unit)? = null,
+    @Suppress("ABSTRACT_COMPOSABLE_DEFAULT_PARAMETER_VALUE")
     enabled: Boolean = true,
+    @Suppress("ABSTRACT_COMPOSABLE_DEFAULT_PARAMETER_VALUE")
     colors: MenuItemColors = MenuDefaults.itemColors(),
+    @Suppress("ABSTRACT_COMPOSABLE_DEFAULT_PARAMETER_VALUE")
     contentPadding: PaddingValues = MenuDefaults.DropdownMenuItemContentPadding,
+    @Suppress("ABSTRACT_COMPOSABLE_DEFAULT_PARAMETER_VALUE")
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
   ) {
     DropdownMenuItem(
@@ -381,7 +389,9 @@ interface CascadeColumnScope : ColumnScope {
    */
   @Composable
   fun DropdownMenuHeader(
+    @Suppress("ABSTRACT_COMPOSABLE_DEFAULT_PARAMETER_VALUE")
     modifier: Modifier = Modifier,
+    @Suppress("ABSTRACT_COMPOSABLE_DEFAULT_PARAMETER_VALUE")
     contentPadding: PaddingValues = PaddingValues(10.5.dp),
     text: @Composable () -> Unit,
   ) {

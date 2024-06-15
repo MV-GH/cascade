@@ -1,3 +1,7 @@
+plugins {
+  id("org.jetbrains.kotlin.plugin.compose") version '2.0.0'
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
@@ -20,8 +24,10 @@ android {
     }
   }
 
-  buildFeatures.compose = true
-  composeOptions.kotlinCompilerExtensionVersion = versions.composeCompiler
+  buildFeatures {
+    viewBinding true
+    compose = true
+  }
 
   kotlinOptions {
     jvmTarget = "1.8"
@@ -46,7 +52,7 @@ dependencies {
   implementation "androidx.recyclerview:recyclerview:$versions.recyclerView"
 
   implementation "androidx.activity:activity-compose:$versions.activityCompose"
-  implementation "com.google.android.material:material:1.9.0"
+  implementation "com.google.android.material:material:1.12.0"
   implementation "androidx.compose.material3:material3:$versions.composeUiMaterial3"
   implementation "androidx.compose.material:material-icons-extended:$versions.composeUi"
   implementation "com.canopas.intro-showcase-view:introshowcaseview:1.0.7"

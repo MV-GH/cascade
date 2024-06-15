@@ -1,6 +1,7 @@
 plugins {
   id "com.dropbox.dropshots" version "0.4.1"
   id "wtf.emulator.gradle" version "0.15.1"
+  id "org.jetbrains.kotlin.plugin.compose" version "2.0.0"
 }
 
 apply plugin: 'com.android.library'
@@ -8,6 +9,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'app.cash.paparazzi'
 apply plugin: "io.github.takahirom.roborazzi"
 apply plugin: 'com.vanniktech.maven.publish'
+apply plugin: 'org.jetbrains.kotlin.plugin.compose'
 
 android {
   resourcePrefix "cascade_"
@@ -23,9 +25,6 @@ android {
   buildFeatures {
     compose = true
     buildConfig = true
-  }
-  composeOptions {
-    kotlinCompilerExtensionVersion = versions.composeCompiler
   }
   kotlinOptions {
     jvmTarget = "1.8"

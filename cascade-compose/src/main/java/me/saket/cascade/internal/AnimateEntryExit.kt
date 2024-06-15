@@ -2,8 +2,8 @@ package me.saket.cascade.internal
 
 import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.rememberTransition
 import androidx.compose.animation.core.tween
-import androidx.compose.animation.core.updateTransition
 import androidx.compose.foundation.layout.Box
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Stable
@@ -46,7 +46,7 @@ internal fun AnimateEntryExit(
   shape: Shape,
   content: @Composable () -> Unit
 ) {
-  val isExpandedTransition = updateTransition(expandedStates, label = "CascadeDropDownMenu")
+  val isExpandedTransition = rememberTransition(expandedStates, label = "CascadeDropDownMenu")
   val scale by isExpandedTransition.animateFloat(
     transitionSpec = {
       tween(if (false isTransitioningTo true) InTransitionDuration else OutTransitionDuration)
