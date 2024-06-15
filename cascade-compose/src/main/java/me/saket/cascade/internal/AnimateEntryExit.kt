@@ -1,5 +1,6 @@
 package me.saket.cascade.internal
 
+import androidx.compose.animation.core.ExperimentalTransitionApi
 import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.rememberTransition
@@ -37,6 +38,7 @@ import androidx.compose.ui.unit.LayoutDirection
 private const val InTransitionDuration = 300
 private const val OutTransitionDuration = 300
 
+@OptIn(ExperimentalTransitionApi::class)
 @Composable
 internal fun AnimateEntryExit(
   modifier: Modifier = Modifier,
